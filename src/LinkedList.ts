@@ -12,7 +12,7 @@ export class LinkedList<T> {
 
   /**
    * Returns the head (first node) of the list.
-   * 
+   *
    * @readonly
    * @type {(LinkedListNode<T> | null)}
    * @memberof LinkedList
@@ -20,7 +20,7 @@ export class LinkedList<T> {
   get head(): LinkedListNode<T> | null {
     return this._head;
   }
-  
+
   private setHead(item: LinkedListNode<T> | null) {
     if (item === null) throw new Error('Invalid value');
     this._head = item;
@@ -84,7 +84,7 @@ export class LinkedList<T> {
    * Creates an instance of LinkedList.
    * Can be initialized with a type, otherwise the type is set to unknown
    * Can be initialized with an array of elements as parameter, automatically converts each element to a LinkedListNode<T>.
-   * 
+   *
    * @param {(T[] | null)} [items=null]
    * @memberof LinkedList
    * @constructor
