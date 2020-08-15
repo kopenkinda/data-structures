@@ -1,0 +1,24 @@
+{
+  "name": "data-structures",
+  "version": "0.0.1",
+  "description": "All common Data Structures & Algorithms implement in TypeScript",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": "https://github.com/kopenkinda/data-structures",
+  "author": "Dmitrii Kopenkin @kopenkinda",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "clean": "rimraf lib/",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.2.0",
+    "tslint": "^6.1.3",
+    "typescript": "^3.9.7"
+  }
+}
