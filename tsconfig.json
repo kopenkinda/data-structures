@@ -11,13 +11,13 @@
     "outDir": "lib",
     "sourceMap": true,
     
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "declaration": true,
     "declarationMap": true,
     "declarationDir": "lib"
   },
   "include": [
-    "src/**/*.ts"
+    "src"
   ],
   "exclude": [
     "test",
