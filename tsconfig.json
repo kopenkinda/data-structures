@@ -7,7 +7,7 @@
     "strict": true,
     "esModuleInterop": true,
     
-    "rootDir": ".",
+    "rootDir": "src",
     "outDir": "lib",
     "sourceMap": true,
     
@@ -20,7 +20,6 @@
     "src"
   ],
   "exclude": [
-    "test",
-    "lib"
+    "test"
   ]
 }
