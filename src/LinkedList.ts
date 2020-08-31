@@ -11,6 +11,23 @@ export class LinkedList<T> {
   private _count: number = 0;
 
   /**
+   * Creates an instance of LinkedList.
+   * Can be initialized with a type, otherwise the type is set to unknown
+   * Can be initialized with an array of elements as parameter, automatically converts each element to a LinkedListNode<T>.
+   *
+   * @param {(T[] | null)} [items=null]
+   * @memberof LinkedList
+   * @constructor
+   */
+  constructor(items: T[] | null = null) {
+    if (items !== null) {
+      for (const item of items) {
+        this.push(item);
+      }
+    }
+  }
+
+  /**
    * Returns the head (first node) of the list.
    *
    * @readonly
@@ -80,21 +97,13 @@ export class LinkedList<T> {
     return this;
   }
 
-  /**
-   * Creates an instance of LinkedList.
-   * Can be initialized with a type, otherwise the type is set to unknown
-   * Can be initialized with an array of elements as parameter, automatically converts each element to a LinkedListNode<T>.
-   *
-   * @param {(T[] | null)} [items=null]
-   * @memberof LinkedList
-   * @constructor
-   */
-  constructor(items: T[] | null = null) {
-    if (items !== null) {
-      for (const item of items) {
-        this.push(item);
-      }
+  *[Symbol.iterator](): Generator<T> {
+    let item = this._head;
+    while (item != null) {
+      yield item.value;
+      item = item.next;
     }
+    return;
   }
 }
 

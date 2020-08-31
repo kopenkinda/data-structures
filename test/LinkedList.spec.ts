@@ -51,6 +51,14 @@ describe('Pre-initialized LinkedList test suite', () => {
     });
   });
 
+  
+
+  it('Should be possible to iterate over the items', () => {
+    const computed_values = [];
+    for (const item of list) computed_values.push(item);
+    expect(computed_values).toEqual([1, 2, '3'])
+  })
+
   it('Should properly clear the list', () => {
     list.clear();
     expect(list.size).toBe(0);
