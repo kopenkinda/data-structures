@@ -51,14 +51,11 @@ export class Stack<T> {
     return this._elements.length;
   }
 
-  get values(): Generator<T> {
-    return this._values();
-  }
-
-  private* _values(): Generator<T> {
+  *[Symbol.iterator](): Iterator<T> {
     for (let i = this.length - 1; i >= 0; i--) {
       const element = this._elements[i];
       yield element;
     }
+    return;
   }
 }

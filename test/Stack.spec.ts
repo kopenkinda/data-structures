@@ -13,7 +13,7 @@ describe('Empty Stack test suite', () => {
   })
   it('should properly return all elements', () => {
     const computed_values = [];
-    for (const element of stack.values)
+    for (const element of stack)
       computed_values.push(element);
     expect(computed_values).toEqual([101, 10]);
   })
@@ -33,7 +33,7 @@ describe('Pre-initialized Stack test suite', () => {
   const stack = new Stack<number>([10, 20, 30]);
   it('should properly initialize the values', () => {
     const computed_values = [];
-    for (const element of stack.values) 
+    for (const element of stack) 
       computed_values.push(element);
     expect(computed_values).toEqual([30, 20, 10]);
   })
