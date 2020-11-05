@@ -1,7 +1,7 @@
 {
-  "name": "data-structures",
-  "version": "0.0.1",
-  "description": "All common Data Structures & Algorithms implement in TypeScript",
+  "name": "@kopenkinda/data-structures",
+  "version": "0.2.1",
+  "description": "All common Data Structures",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": "https://github.com/kopenkinda/data-structures",
